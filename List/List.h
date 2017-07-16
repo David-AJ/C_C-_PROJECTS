@@ -29,8 +29,8 @@ int len(List *a){
 
 
 List* reverse(List *a){
-    List* pre = NULL;
-    List* next;
+    List *pre = NULL;
+    List *next;
     while(a){
         next = a->next;
         a->next = pre;
