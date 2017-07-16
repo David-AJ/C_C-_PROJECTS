@@ -8,5 +8,6 @@
         "_mingw.h": "c",
         "io.h": "c",
         "stddef.h": "c"
-    }
+    },
+    "files.encoding": "gbk"
 }

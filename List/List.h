@@ -28,18 +28,6 @@ int len(List *a){
 }
 
 
-List* reverse(List *a){
-    List *pre = NULL;
-    List *next;
-    while(a){
-        next = a->next;
-        a->next = pre;
-        pre = a;
-        a = next;
-    }
-    return pre;
-}
-
 List* CreateList(int len){
     List *q = new List(0);
     List *a = q;

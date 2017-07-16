@@ -3,17 +3,28 @@
 
 using namespace std;
 
+List* reverse(List *a){
+    List *pre = NULL;
+    List *next;
+    while(a){
+        next = a->next;
+        a->next = pre;
+        pre = a;
+        a = next;
+    }
+    return pre;
+}
 
 int main() {
-    //åˆ›å»ºä¸€ä¸ªList
+    //´´½¨Ò»¸öList
     List *a = CreateList(6);
 
-    printf("åˆ›å»ºList: \n");
+    printf("´´½¨List: \n");
     printList(a);
-    //è½¬ç½®List
+    //×ªÖÃList
     a = reverse(a);
 
-    printf("è½¬ç½®å: \n");
+    printf("×ªÖÃºó: \n");
     printList(a);
     cout<<"length of List:"<<" "<<len(a)<<endl;
 
