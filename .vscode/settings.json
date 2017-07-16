@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "pthread.h": "c",
+        "stdio.h": "c",
+        "malloc.h": "c",
+        "stdlib.h": "c",
+        "c++config.h": "c",
+        "_mingw.h": "c",
+        "io.h": "c",
+        "stddef.h": "c"
+    }
+}
