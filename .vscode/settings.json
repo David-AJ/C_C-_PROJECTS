@@ -8,7 +8,8 @@
         "_mingw.h": "c",
         "io.h": "c",
         "stddef.h": "c",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "cstdio": "cpp"
     },
     "files.encoding": "gbk"
 }
