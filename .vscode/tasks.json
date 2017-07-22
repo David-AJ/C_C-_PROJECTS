@@ -4,6 +4,6 @@
     "version": "0.1.0",
     "command": "g++",
     "isShellCommand": true,
-    "args": ["-g","${file}","-I","${workspaceRoot}","-I","${workspaceRoot}/lib"],
+    "args": ["-g","${file}","-I","${workspaceRoot}","-I","${workspaceRoot}/header lib"],
     "showOutput": "always"
 }
