@@ -1,5 +1,7 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
+#include <sys/wait.h>
 #include <unistd.h>
 
 #define MAX_LINE		80 /* 80 chars per line, per command */
@@ -80,12 +82,12 @@ int main(void)
 			int pid;
 			pid = fork();
 			if (pid < 0)
-				printf("fork error!");
+				printf("fork error!\n");
 			else if (pid == 0){
 				execvp(args[0], args);//传递参数给execvp()
 				}
 			else{
-				printf("%s","I'm father without wait()");
+				printf("%s","I'm father without wait()\n");
 				continue;
 				}
 		}
@@ -93,13 +95,13 @@ int main(void)
 			int pid;
 			pid = fork();
 			if (pid < 0)
-				printf("fork error!");
+				printf("fork error!\n");
 			else if (pid == 0){
 				execvp(args[0], args);//传递参数给execvp()
 				}
 			else{
 				wait(NULL);
-				printf("%s","I'm father with wait()");
+				printf("%s","I'm father with wait()\n");
 				continue;
 			}
 		}
