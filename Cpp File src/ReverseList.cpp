@@ -1,7 +1,6 @@
 #include<iostream>
 #include "List.h"
 
-using namespace std;
 
 List* reverse(List *a){
     List *pre = NULL;
@@ -16,17 +15,18 @@ List* reverse(List *a){
 }
 
 int main() {
+    printf("请输入列表长度： \n");
+    int num;
+    scanf("%d",&num);
     //创建一个List
-    List *a = CreateList(6);
-
+    List *a = CreateList(num);
     printf("创建List: \n");
     printList(a);
     //转置List
     a = reverse(a);
-
     printf("转置后: \n");
     printList(a);
-    cout<<"length of List:"<<" "<<len(a)<<endl;
+    printf("length of List: %d",len(a));
 
     return 0;
 }

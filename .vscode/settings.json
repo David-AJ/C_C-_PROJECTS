@@ -9,7 +9,12 @@
         "io.h": "c",
         "stddef.h": "c",
         "iostream": "cpp",
-        "cstdio": "cpp"
+        "cstdio": "cpp",
+        "ratio": "cpp",
+        "vector": "c",
+        "random": "cpp",
+        "random.h": "c",
+        "wingdi.h": "c"
     },
     "files.encoding": "gbk"
 }

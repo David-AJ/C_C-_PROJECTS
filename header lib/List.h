@@ -1,7 +1,6 @@
 #include<iostream>
-using namespace std;
 #include<vector>
-#include<map>
+
 
 struct List {
     int value;
