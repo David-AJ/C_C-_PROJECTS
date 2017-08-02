@@ -28,9 +28,9 @@ int main(void)
         //用flag标记是否wait
 		int i,j,flag = 1;	
 		i = j = 0;
-        //input保存命令行输入的字符串（包含了空格和结尾"\r\n"）
+        //input保存命令行输入的字符串（包含了空格和结尾"\n"）
 		fgets(input,80,stdin);
-		if(input=="history\r\n"){
+		if(strcmp(input,"history\n")==0 or strcmp(input,"history &\n")==0){
 			print();
 			continue;
 		}
@@ -49,9 +49,9 @@ int main(void)
 			}		
 		i--;		         	
 
-        //最后一个非NULL的args保存了有效字符和"\r\n"
-        //切割掉"\r\n"
-		args[i] = strtok(args[i], "\r\n");	                 
+        //最后一个非NULL的args保存了有效字符和"\n"
+        //切割掉"\n"
+		args[i] = strtok(args[i], "\n");	                 
 
 		
         //按不同命令判断

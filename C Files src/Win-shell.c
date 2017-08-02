@@ -20,7 +20,7 @@ void printHist(){                  //按序号输出所有历史记录
 }
 
 void saveHist(int h, char* input){
-	char temp[MAX_LINE] = {NULL};
+	char* temp = new char[MAX_LINE];
 	strcpy(temp,input);
 	history[h] = temp;
 }
@@ -40,7 +40,7 @@ int main(){
         //input获取命令行输入的字符串（不包含结尾"\n"）
 		fgets(input,80,stdin);
 		//如果是history指令
-		if(input=="history\n" or input=="history &\n"){
+		if(strcmp(input,"history\n")==0 or strcmp(input,"history &\n")==0){
 			printHist();
 			if(*history[h-1]!='h'){
 				saveHist(h,strtok(input," "));
@@ -50,8 +50,10 @@ int main(){
 		}
 		
 		//保存历史记录
-		saveHist(h,input);
-		h++;
+		if(strcmp(input,history[h-1])!=0){
+			saveHist(h,input);
+			h++;
+		}
 
         //把input的字符串按照空格分段赋值给args
 		args[i] = strtok(input, " ");
