@@ -14,7 +14,15 @@
         "vector": "c",
         "random": "cpp",
         "random.h": "c",
-        "wingdi.h": "c"
+        "wingdi.h": "c",
+        "codecvt.h": "c",
+        "msxml2.h": "c",
+        "ntdsapi.h": "c",
+        "c_test1.c": "cpp",
+        "unix-shell.c": "cpp",
+        "win-shell.c": "cpp",
+        "cstring": "cpp",
+        "pthread_time.h": "c"
     },
     "files.encoding": "gbk"
 }
